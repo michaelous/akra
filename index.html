@@ -2,6 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Akra</title>
 
 </head>
@@ -48,6 +50,48 @@
         <div class="services-subheader">Potrzebujesz pomocy i wsparcia? Specjalizujemy się w realizacji projektów IT dla przedsiębiorstw oraz korporacji. Oferujemy wysokiej jakości kompleksowe usługi informatyczne. Nad Twoim projektem będzie czuwało grono specjalnie wyselekcjonowanych
             specjalistów, którzy sprawią, że Twój projekt stanie się jeszcze bardziej wartościowy. Dzięki naszemu bogatemu doświadczeniu pomagamy klientom w projektowaniu, budowaniu oraz kierowaniu stronami i aplikacjami internetowymi. Sprawdź, co możemy
             dla Ciebie zrobić.</div>
+
+        <div class="icons-container">
+            <div class="icon-text">
+                <div class="icon-wrapper">
+                    <i class="fas fa-search"></i>
+                </div>
+                <p class="service-header"> audyt </p>
+                <p class="service-text">
+                    Nie jesteś pewien, czy środowisko IT w Twojej firmie jest wydajne i bezpieczne? Sprawdzimy to dla Ciebie i przedstawimy rozwiązanie ewentualnych problemów.
+                </p>
+            </div>
+
+            <div class="icon-text">
+                <div class="icon-wrapper">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <p class="service-header"> konsulting </p>
+                <p class="service-text">
+                    Nasi klienci otrzymują wsparcie w jednym z najtrudniejszych wyzwań, które stoi przed kadrą kierowniczą, czyli w zarządzaniu obszarem IT. Z nami nie zostaniesz na lodzie.
+                </p>
+            </div>
+
+            <div class="icon-text">
+                <div class="icon-wrapper">
+                    <i class="fas fa-globe"></i>
+                </div>
+
+                <p class="service-header">outsorcing</p>
+                <p class="service-text">
+                    Nasi specjaliści będą odpowiedzialni za działania IT w Twoim przedsiębiorstwie. Dzięki temu Twój system informatyczny będzie stabilny, a Ty zaoszczędzisz cenny czas i pieniądze.
+                </p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="clients">
+        <p class="project-count">100</p>
+        <p class="js-count">200</p>
+        <p class="js-count">400</p>
+        <p class="js-count">800</p>
     </section>
 
 </body>
@@ -58,11 +102,41 @@
             var nav = document.querySelector(".nav-container");
             let scroll = window.scrollY;
             if (scroll > 100) {
-                console.log(scroll);
+
                 nav.classList.add('nav-scroll')
             } else {
                 nav.classList.remove('nav-scroll');
             }
         });
     </script>
+
+
+    <script>
+        // const show = document.querySelector('.project-count'),
+        //     number = Number(show.innerHTML) + 1;
+        // console.log(number);
+
+        // let counter = 0,
+        //     delay = 1,
+        //     x = number / 2,
+        //     y = 0;
+
+
+
+        // count(show);
+
+        // function count() {
+        //     y++;
+        //     delay = (x - y);
+        //     show.innerHTML = counter.toString();
+        //     counter++;
+        //     if (counter < number) {
+        //         setTimeout(function() {
+        //             count();
+        //         }, delay)
+        //     }
+        // }
+    </script>
+
+    <p>©2019 AKRA POLSKA . ALL RIGHTS RESERVED</p>
 </footer>
