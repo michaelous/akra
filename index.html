@@ -6,37 +6,63 @@
 
 </head>
 
-<nav>
-    <img alt="logo" class="logo" src="images/akra-logo-transt-black.png">
-    <img alt="logo" class="logo logo-hidden" src="images/akra-logo-transparent-1.png">
-    <ul class="nav-sections">
-        <li class="nav-item">
-            <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href=""></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href=""></a>
-        </li>
-    </ul>
+<nav class="nav-container">
+    <div class="nav-wrapper">
+        <img alt="logo" class="logo" src="images/akra-logo-transt-black.png">
+        <img alt="logo" class="logo logo-hidden" src="images/akra-logo-transparent-1.png">
+        <ul class="nav-sections">
+            <li class="nav-item">
+                <a class="nav-link" href="">O nas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Usługi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Aktualności</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Kariera</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">Kontakt</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <body>
-    <div class="main-section">
-        <h1>Website test</h1>
-    </div>
+    <section class="main-section">
+        <div class="main-cta">
+            <h1 class="main-header">Akra polska</h1>
+            <p class="header-subtitle">Nowe technologie w</p>
+            <p class="header-subtitle">twoim biznesie</p>
+            <button class="cta-button">skontatuj się z nami</button>
+        </div>
+        <div class="separator"></div>
+    </section>
+    <section class="services">
+        <h2>Nasze usługi</h2>
+        <div class="services-subheader">Potrzebujesz pomocy i wsparcia? Specjalizujemy się w realizacji projektów IT dla przedsiębiorstw oraz korporacji. Oferujemy wysokiej jakości kompleksowe usługi informatyczne. Nad Twoim projektem będzie czuwało grono specjalnie wyselekcjonowanych
+            specjalistów, którzy sprawią, że Twój projekt stanie się jeszcze bardziej wartościowy. Dzięki naszemu bogatemu doświadczeniu pomagamy klientom w projektowaniu, budowaniu oraz kierowaniu stronami i aplikacjami internetowymi. Sprawdź, co możemy
+            dla Ciebie zrobić.</div>
+    </section>
+
 </body>
 
 <footer>
-
+    <script>
+        window.addEventListener('scroll', function() {
+            var nav = document.querySelector(".nav-container");
+            let scroll = window.scrollY;
+            if (scroll > 100) {
+                console.log(scroll);
+                nav.classList.add('nav-scroll')
+            } else {
+                nav.classList.remove('nav-scroll');
+            }
+        });
+    </script>
 </footer>
