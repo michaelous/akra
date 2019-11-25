@@ -88,11 +88,59 @@
     </section>
 
     <section class="clients">
-        <p class="project-count">100</p>
-        <p class="js-count">200</p>
-        <p class="js-count">400</p>
-        <p class="js-count">800</p>
+        <div class="clients-inner">
+            <div class="project-container">
+                <i class="fas fa-tasks"></i>
+                <p id="count" class="js-count">35</p>
+                <p class="project-text">PROJEKTY NA ROK</p>
+            </div>
+
+            <div class="project-container">
+                <i class="fas fa-users"></i>
+                <p class="js-count">42</p>
+                <p class="project-text">PRACOWNIKÓW</p>
+            </div>
+
+            <div class="project-container">
+                <i class="far fa-file"></i>
+                <p class="js-count">80</p>
+                <p class="project-text">ZADOWOLONYCH KLIENTÓW</p>
+            </div>
+
+            <div class="project-container">
+                <i class="fas fa-thumbs-up"></i>
+                <p class="js-count">260</p>
+                <p class="project-text">LAT DOŚWIADCZENIA PROGRAMISTÓW</p>
+
+            </div>
+        </div>
     </section>
+
+    <div class="contact-section">
+        <div class="contact-inner">
+            <div class="contact-header">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-text">
+                    <p>Umów się na spotkanie</p>
+                    <p>Omówimy Twój projekt</p>
+                </div>
+            </div>
+            <button class="contact-btn"><span>kontakt</span><i class="fas fa-phone"></i></button>
+        </div>
+
+    </div>
+
+    <div class="socials-section">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-google-plus-g"></i>
+        <i class="fab fa-twitter"></i>
+
+    </div>
+
+
+
+
 
 </body>
 
@@ -112,30 +160,11 @@
 
 
     <script>
-        // const show = document.querySelector('.project-count'),
-        //     number = Number(show.innerHTML) + 1;
-        // console.log(number);
+        const numbers = document.querySelectorAll('.js-count');
+        for (i = 0; i < numbers.length; ++i) {
+            let val = numbers[i].innerHTML;
 
-        // let counter = 0,
-        //     delay = 1,
-        //     x = number / 2,
-        //     y = 0;
-
-
-
-        // count(show);
-
-        // function count() {
-        //     y++;
-        //     delay = (x - y);
-        //     show.innerHTML = counter.toString();
-        //     counter++;
-        //     if (counter < number) {
-        //         setTimeout(function() {
-        //             count();
-        //         }, delay)
-        //     }
-        // }
+        };
     </script>
 
     <p>©2019 AKRA POLSKA . ALL RIGHTS RESERVED</p>

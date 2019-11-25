@@ -222,6 +222,7 @@
   text-align: center;
   font-size: 50px;
   color: black;
+  margin: 30px;
 }
 
 .services .services-subheader {
@@ -332,6 +333,92 @@
 }
 
 .clients {
+  margin: 0 auto;
+  background-color: #161616;
+  padding: 20px 0px 20px 0px;
+}
+
+.clients .clients-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.clients .clients-inner .project-container {
+  padding: 10px;
+  text-align: center;
+  height: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  width: 250px;
+  border: 2px solid #161616;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.clients .clients-inner .project-container:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #090909;
+}
+
+.clients .clients-inner .project-container:hover .js-count {
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  color: red;
+  font-size: 35px;
+}
+
+.clients .clients-inner .project-container:hover .project-text {
+  font-size: 19px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.clients .clients-inner .project-container i {
+  color: white;
+  font-size: 40px;
+}
+
+.clients .clients-inner .project-container .js-count {
+  font-size: 30px;
+}
+
+.clients .clients-inner .project-container p {
+  color: white;
+  font-size: 18px;
+}
+
+.contact-section {
+  background: #dd3333;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.contact-section .contact-inner {
   max-width: 1170px;
   margin: 0 auto;
   display: -webkit-box;
@@ -347,6 +434,109 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact-section .contact-inner .contact-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.contact-section .contact-inner .contact-header i {
+  font-size: 60px;
+  color: white;
+}
+
+.contact-section .contact-inner .contact-header .contact-text {
+  margin-left: 20px;
+}
+
+.contact-section .contact-inner .contact-header .contact-text p {
+  padding: 5px;
+  color: white;
+}
+
+.contact-section .contact-inner .contact-header .contact-text p:first-child {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contact-section .contact-inner .contact-header .contact-text p:nth-child(2) {
+  font-style: italic;
+}
+
+.contact-section .contact-inner .contact-btn {
+  width: 150px;
+  height: 50px;
+  border: none;
+  padding: 0px 20px 0px 20px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid #ec8a8a;
+  background: #e45f5f;
+}
+
+.contact-section .contact-inner .contact-btn span,
+.contact-section .contact-inner .contact-btn i {
+  text-transform: uppercase;
+  color: white;
+}
+
+.socials-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+.socials-section i {
+  padding: 20px;
+  margin: 5px;
+  font-size: 25px;
+  color: white;
+  border-radius: 50%;
+  background: lightgrey;
+  border: 2px solid grey;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30px;
+  width: 30px;
 }
 
 footer {
