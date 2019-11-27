@@ -45,8 +45,9 @@
   background: rgba(255, 255, 255, 0.9);
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  z-index: 2;
 }
 
 .nav-scroll .logo {
@@ -505,6 +506,118 @@
   color: white;
 }
 
+.portfolio {
+  padding: 50px;
+  min-height: 600px;
+  background-image: url("../images/portfolio-background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.portfolio .portfolio-inner {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.portfolio .portfolio-inner .portfolio-header {
+  font-size: 60px;
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+.portfolio .portfolio-inner .portfolio-subheader {
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+.portfolio .portfolio-inner .reference-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+}
+
+.portfolio .portfolio-inner .reference-item .image-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.portfolio .portfolio-inner .reference-item .image-container .project-img {
+  width: auto;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  text-align: justify;
+  padding: 20px 30px 20px 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info p:first-child {
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info p:nth-child(2) {
+  font-size: 16px;
+  line-height: 30px;
+  padding: 20px 0px 30px 0px;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info .btn-live {
+  width: 190px;
+  height: 40px;
+  text-decoration: none;
+  background: transparent;
+  color: #dd3333;
+  border: 1px solid #dd3333;
+  padding: 10px 20px 10px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info .btn-live .fas {
+  margin-left: 20px;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info .btn-live:hover {
+  -webkit-transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+  background-color: #921818;
+  color: white;
+}
+
+.portfolio .portfolio-inner .reference-item .project-info .btn-live:hover .fas {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+  color: white;
+}
+
 .section-references {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,18 +630,25 @@
   position: relative;
 }
 
-.section-references h3 {
+.section-references .references-inner {
+  max-width: 1270px;
+  margin: 0 auto;
+}
+
+.section-references .references-inner h3 {
   text-align: center;
   font-size: 50px;
   color: black;
   margin: 30px;
 }
 
-.section-references .owl-carousel,
-.section-references .owl-theme,
-.section-references .owl-stage-outer,
-.section-references .reference-item {
+.section-references .references-inner .owl-carousel,
+.section-references .references-inner .owl-theme,
+.section-references .references-inner .owl-stage-outer,
+.section-references .references-inner .reference-item {
   height: 300px;
+  max-width: 1170px;
+  position: relative;
 }
 
 .section-references .owl-dots {
@@ -552,7 +672,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 20px 0px 0px 0px;
+  margin: 25px 20px 0px 25px;
 }
 
 .section-references .card-reference div .company {
