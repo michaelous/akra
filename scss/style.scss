@@ -3,13 +3,11 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
 }
 
 $red: #dd3333;
-//zmienne
-// mixins
 @mixin flex-row-between-center {
     display: flex;
     flex-direction: row;
@@ -47,6 +45,17 @@ $red: #dd3333;
     }
 }
 
+.header {
+    font-size: 60px;
+    padding: 10px;
+    text-align: center;
+}
+
+.section {
+    padding: 50px;
+    margin: 0 auto;
+}
+
 // nav
 .nav-container {
     position: fixed;
@@ -69,11 +78,12 @@ $red: #dd3333;
 
 // add only while scrolling
 .nav-scroll {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     transition: 0.3s all ease;
     padding-bottom: 10px;
     padding-top: 10px;
     z-index: 2;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .08);
     .logo {
         display: none;
     }
@@ -107,7 +117,7 @@ $red: #dd3333;
             background: url(../images/line.png);
             position: absolute;
             left: calc(50% - 35px);
-            bottom: -20px;
+            bottom: -15px;
             height: 2px;
             width: 70px;
         }
@@ -165,6 +175,31 @@ $red: #dd3333;
             }
         }
     }
+    .message {
+        @include flex-row-center-center;
+        position: fixed;
+        cursor: pointer;
+        right: 30px;
+        bottom: 30px;
+        border-radius: 50%;
+        border: 1px solid #f2f2f2;
+        background: #f5f5f5;
+        height: 75px;
+        width: 75px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, .10);
+        &:hover {
+            transition: 0.3s all;
+            background: $red;
+            img {
+                filter: invert(100%);
+                height: 32px;
+            }
+        }
+        img {
+            height: 30px;
+            width: auto;
+        }
+    }
 }
 
 .separator {
@@ -177,22 +212,20 @@ $red: #dd3333;
     position: absolute;
 }
 
-.services {
+.services-section {
     max-width: 1170px;
     margin: 0 auto;
     position: relative;
     width: 100%;
     height: 100%;
-    h1 {
-        text-align: center;
-        font-size: 50px;
-        color: black;
+    .header {
         margin: 30px 0px 70px 0px;
         position: relative;
-        @include header-line(60px);
+        @include header-line(80px);
     }
     .services-subheader {
-        text-align: center;
+        text-align: justify;
+        text-align-last: center;
     }
     .icons-container {
         display: flex;
@@ -203,7 +236,8 @@ $red: #dd3333;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            margin: 50px;
+            max-width: 320px;
+            margin: 50px 20px 50px 20px;
             .icon-wrapper {
                 display: flex;
                 flex-direction: column;
@@ -230,8 +264,8 @@ $red: #dd3333;
                 }
                 .fas {
                     font-size: 25px;
+                    padding: 24px;
                     color: grey;
-                    padding: 28px;
                     box-sizing: border-box;
                     background-color: #eff2f7;
                     border: 1px solid darken($color: #eff2f7, $amount: 2);
@@ -255,16 +289,16 @@ $red: #dd3333;
                 }
             }
             .service-text {
-                text-align: center;
+                text-align: justify;
+                text-align-last: center;
             }
         }
     }
 }
 
-.numbers {
+.numbers-section {
     margin: 0 auto;
     background-color: #161616;
-    padding: 30px 0px 30px 0px;
     .numbers-inner {
         display: flex;
         flex-direction: row;
@@ -275,10 +309,11 @@ $red: #dd3333;
         .project-container {
             padding: 10px;
             text-align: center;
-            height: 170px;
+            height: 190px;
             display: flex;
             box-sizing: border-box;
             flex-direction: column;
+            align-items: center;
             justify-content: space-between;
             color: white;
             width: 250px;
@@ -371,14 +406,7 @@ $red: #dd3333;
     }
 }
 
-.clients {
-    margin: 0 auto;
-    padding: 50px;
-    h5 {
-        text-align: center;
-        margin: 30px;
-        font-size: 50px;
-    }
+.clients-section {
     p {
         text-align: center;
         margin-bottom: 100px;
@@ -397,13 +425,9 @@ $red: #dd3333;
 }
 
 .technologies-section {
-    padding: 50px;
-    h2 {
-        text-align: center;
-        margin: 30px;
-        font-size: 50px;
+    .header {
         position: relative;
-        @include header-line(60px);
+        @include header-line(80px);
     }
 }
 
@@ -447,6 +471,7 @@ $red: #dd3333;
         box-sizing: border-box;
         text-align: center;
         text-transform: uppercase;
+        font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -459,7 +484,8 @@ $red: #dd3333;
         }
     }
     .selected {
-        border-bottom: 2px solid #dd3333;
+        background: #dd3333;
+        color: white;
     }
     .tab-content {
         display: none;
@@ -468,10 +494,11 @@ $red: #dd3333;
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 100px;
+        top: 120px;
         z-index: 1;
         .tab-title {
             margin-bottom: 50px;
+            font-weight: bold;
             position: relative;
             &:after {
                 content: "";
@@ -545,7 +572,6 @@ $red: #dd3333;
 }
 
 .portfolio {
-    padding: 50px;
     min-height: 600px;
     background-image: url("../images/portfolio-background.jpg");
     background-repeat: no-repeat;
@@ -561,7 +587,8 @@ $red: #dd3333;
             text-align: center;
         }
         .portfolio-subheader {
-            margin-bottom: 50px;
+            margin-bottom: 100px;
+            margin-top: 10px;
             text-align: center;
             position: relative;
             color: white;
@@ -592,6 +619,7 @@ $red: #dd3333;
                 p:first-child {
                     font-size: 30px;
                     text-transform: capitalize;
+                    font-weight: bold;
                 }
                 p:nth-child(2) {
                     font-size: 16px;
@@ -636,13 +664,10 @@ $red: #dd3333;
     .references-inner {
         max-width: 1270px;
         margin: 0 auto;
-        h4 {
-            text-align: center;
-            font-size: 50px;
+        .header {
             color: black;
-            margin: 30px;
             position: relative;
-            @include header-line(60px);
+            @include header-line(80px);
         }
         .owl-carousel,
         .owl-theme,

@@ -2,6 +2,8 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -38,15 +40,16 @@
 <body>
     <section class="main-section">
         <div class="main-cta">
-            <h1 class="main-header">Akra polska</h1>
+            <h1 class="main-header bounceIn">Akra polska</h1>
             <p class="header-subtitle">Nowe technologie w</p>
             <p class="header-subtitle">twoim biznesie</p>
             <button class="cta-button">skontatuj się z nami</button>
         </div>
         <div class="separator"></div>
+        <span class="message"><img src="images/msg-icon.png"></span>
     </section>
-    <section class="services">
-        <h1>Nasze usługi</h1>
+    <section class="services-section">
+        <h1 class="header">Nasze usługi</h1>
         <div class="services-subheader">Potrzebujesz pomocy i wsparcia? Specjalizujemy się w realizacji projektów IT dla przedsiębiorstw oraz korporacji. Oferujemy wysokiej jakości kompleksowe usługi informatyczne. Nad Twoim projektem będzie czuwało grono specjalnie wyselekcjonowanych
             specjalistów, którzy sprawią, że Twój projekt stanie się jeszcze bardziej wartościowy. Dzięki naszemu bogatemu doświadczeniu pomagamy klientom w projektowaniu, budowaniu oraz kierowaniu stronami i aplikacjami internetowymi. Sprawdź, co możemy
             dla Ciebie zrobić.
@@ -81,33 +84,37 @@
             </div>
         </div>
     </section>
-    <section class="numbers">
+    <section class="numbers-section section">
         <div class="numbers-inner">
             <div class="project-container">
-                <i class="fas fa-tasks"></i>
+                <!-- <i class="fas fa-tasks"></i> -->
+                <img width="70" height="70" src="images/share.svg">
                 <p id="count" class="js-count">35</p>
                 <p class="project-text">PROJEKTY NA ROK</p>
             </div>
             <div class="project-container">
-                <i class="fas fa-users"></i>
+                <!-- <i class="fas fa-users"></i> -->
+                <img width="70" height="70" src="images/teamwork.svg">
                 <p class="js-count">42</p>
                 <p class="project-text">PRACOWNIKÓW</p>
             </div>
             <div class="project-container">
-                <i class="far fa-file"></i>
+                <!-- <i class="far fa-file"></i> -->
+                <img width="70" height="70" src="images/meeting.svg">
                 <p class="js-count">80</p>
                 <p class="project-text">ZADOWOLONYCH KLIENTÓW</p>
             </div>
             <div class="project-container">
-                <i class="fas fa-thumbs-up"></i>
+                <!-- <i class="fas fa-thumbs-up"></i> -->
+                <img width="70" height="70" src="images/computer.svg">
                 <p class="js-count">260</p>
                 <p class="project-text">LAT DOŚWIADCZENIA PROGRAMISTÓW</p>
             </div>
         </div>
     </section>
 
-    <section class="technologies-section">
-        <h2>Technologie</h2>
+    <section class="technologies-section section">
+        <h2 class="header wow slideInLeft animated">Technologie</h2>
         <div class="technologies-inner">
             <div class="tabs-container">
                 <ul class="tabs-list">
@@ -174,9 +181,9 @@
     </section>
 
 
-    <section class="portfolio">
+    <section class="portfolio section">
         <div class="portfolio-inner">
-            <h3 class="portfolio-header">Portfolio</h3>
+            <h3 class="portfolio-header header">Portfolio</h3>
             <p class="portfolio-subheader">Zobacz co zrobilismy</p>
             <div class="owl-carousel  owl-one owl-theme">
 
@@ -209,9 +216,9 @@
 
 
 
-    <section class="section-references">
+    <section class="section-references section">
         <div class="references-inner">
-            <h4>References</h4>
+            <h4 class="header">References</h4>
             <div class="owl-carousel owl-three owl-theme">
                 <div class="reference-item" data-merge="1">
                     <div class="card-reference">
@@ -256,9 +263,9 @@
         </div>
     </section>
 
-    <section class="clients">
+    <section class="clients-section section">
         <div class="clients-inner">
-            <h5>Klienci</h5>
+            <h5 class="header">Klienci</h5>
             <p>Praca z nimi to czysta przyjemność</p>
             <div class="owl-two owl-carousel owl-theme">
                 <div class="reference-item">
@@ -339,5 +346,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/wow.js"></script>
     <script src="js/owl.js"></script>
+
 </footer>

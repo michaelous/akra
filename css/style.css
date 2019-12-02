@@ -2,8 +2,19 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-decoration: none;
+}
+
+.header {
+  font-size: 60px;
+  padding: 10px;
+  text-align: center;
+}
+
+.section {
+  padding: 50px;
+  margin: 0 auto;
 }
 
 .nav-container {
@@ -42,12 +53,14 @@
 }
 
 .nav-scroll {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
   padding-bottom: 10px;
   padding-top: 10px;
   z-index: 2;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);
 }
 
 .nav-scroll .logo {
@@ -91,7 +104,7 @@
   background: url(../images/line.png);
   position: absolute;
   left: calc(50% - 35px);
-  bottom: -20px;
+  bottom: -15px;
   height: 2px;
   width: 70px;
 }
@@ -179,6 +192,50 @@
   transition: all .5s ease-out;
 }
 
+.main-section .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  cursor: pointer;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+  border: 1px solid #f2f2f2;
+  background: #f5f5f5;
+  height: 75px;
+  width: 75px;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.main-section .message:hover {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  background: #dd3333;
+}
+
+.main-section .message:hover img {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  height: 32px;
+}
+
+.main-section .message img {
+  height: 30px;
+  width: auto;
+}
+
 .separator {
   bottom: -100px;
   border-top: 10px solid grey;
@@ -190,7 +247,7 @@
   position: absolute;
 }
 
-.services {
+.services-section {
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
@@ -198,41 +255,39 @@
   height: 100%;
 }
 
-.services h1 {
-  text-align: center;
-  font-size: 50px;
-  color: black;
+.services-section .header {
   margin: 30px 0px 70px 0px;
   position: relative;
 }
 
-.services h1:before {
+.services-section .header:before {
   content: '';
   position: absolute;
   border: 1px solid #dddddd;
   width: 0;
   height: 35px;
-  top: 60px;
+  top: 80px;
   left: 50%;
 }
 
-.services h1:after {
+.services-section .header:after {
   content: "";
   position: absolute;
   width: 6px;
   height: 6px;
   border: 2px solid #ff6400;
   border-radius: 50%;
-  top: 95px;
+  top: 115px;
   left: calc(50% - 4px);
   border: 2px solid #dd3333;
 }
 
-.services .services-subheader {
-  text-align: center;
+.services-section .services-subheader {
+  text-align: justify;
+  text-align-last: center;
 }
 
-.services .icons-container {
+.services-section .icons-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,7 +300,7 @@
           justify-content: space-between;
 }
 
-.services .icons-container .icon-text {
+.services-section .icons-container .icon-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,10 +314,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 50px;
+  max-width: 320px;
+  margin: 50px 20px 50px 20px;
 }
 
-.services .icons-container .icon-text .icon-wrapper {
+.services-section .icons-container .icon-text .icon-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -286,7 +342,7 @@
   transition: 1s all ease;
 }
 
-.services .icons-container .icon-text .icon-wrapper:hover {
+.services-section .icons-container .icon-text .icon-wrapper:hover {
   -webkit-transition: 1s all ease;
   transition: 1s all ease;
   cursor: pointer;
@@ -294,7 +350,7 @@
   border: 2px solid #bd2020;
 }
 
-.services .icons-container .icon-text .icon-wrapper:hover .fas {
+.services-section .icons-container .icon-text .icon-wrapper:hover .fas {
   -webkit-transition: 1s all ease;
   transition: 1s all ease;
   color: white;
@@ -302,10 +358,10 @@
   border: 2px solid #bd2020;
 }
 
-.services .icons-container .icon-text .icon-wrapper .fas {
+.services-section .icons-container .icon-text .icon-wrapper .fas {
   font-size: 25px;
+  padding: 24px;
   color: grey;
-  padding: 28px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #eff2f7;
@@ -313,7 +369,7 @@
   border-radius: 50%;
 }
 
-.services .icons-container .icon-text .service-header {
+.services-section .icons-container .icon-text .service-header {
   color: black;
   text-transform: uppercase;
   font-weight: bold;
@@ -321,7 +377,7 @@
   position: relative;
 }
 
-.services .icons-container .icon-text .service-header:after {
+.services-section .icons-container .icon-text .service-header:after {
   content: "";
   background: url(../images/line.png);
   position: absolute;
@@ -331,17 +387,17 @@
   width: 40px;
 }
 
-.services .icons-container .icon-text .service-text {
-  text-align: center;
+.services-section .icons-container .icon-text .service-text {
+  text-align: justify;
+  text-align-last: center;
 }
 
-.numbers {
+.numbers-section {
   margin: 0 auto;
   background-color: #161616;
-  padding: 30px 0px 30px 0px;
 }
 
-.numbers .numbers-inner {
+.numbers-section .numbers-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,10 +415,10 @@
   max-width: 1170px;
 }
 
-.numbers .numbers-inner .project-container {
+.numbers-section .numbers-inner .project-container {
   padding: 10px;
   text-align: center;
-  height: 170px;
+  height: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,6 +428,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -382,35 +441,35 @@
   transition: 0.3s all;
 }
 
-.numbers .numbers-inner .project-container:hover {
+.numbers-section .numbers-inner .project-container:hover {
   cursor: pointer;
   border-radius: 10px;
   border: 1px solid #090909;
 }
 
-.numbers .numbers-inner .project-container:hover .js-count {
+.numbers-section .numbers-inner .project-container:hover .js-count {
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
   color: red;
   font-size: 35px;
 }
 
-.numbers .numbers-inner .project-container:hover .project-text {
+.numbers-section .numbers-inner .project-container:hover .project-text {
   font-size: 19px;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
 }
 
-.numbers .numbers-inner .project-container i {
+.numbers-section .numbers-inner .project-container i {
   color: white;
   font-size: 40px;
 }
 
-.numbers .numbers-inner .project-container .js-count {
+.numbers-section .numbers-inner .project-container .js-count {
   font-size: 30px;
 }
 
-.numbers .numbers-inner .project-container p {
+.numbers-section .numbers-inner .project-container p {
   color: white;
   font-size: 18px;
 }
@@ -503,24 +562,13 @@
   color: white;
 }
 
-.clients {
-  margin: 0 auto;
-  padding: 50px;
-}
-
-.clients h5 {
-  text-align: center;
-  margin: 30px;
-  font-size: 50px;
-}
-
-.clients p {
+.clients-section p {
   text-align: center;
   margin-bottom: 100px;
   position: relative;
 }
 
-.clients p:before {
+.clients-section p:before {
   content: '';
   position: absolute;
   border: 1px solid #dddddd;
@@ -530,7 +578,7 @@
   left: 50%;
 }
 
-.clients p:after {
+.clients-section p:after {
   content: "";
   position: absolute;
   width: 6px;
@@ -542,44 +590,37 @@
   border: 2px solid #dd3333;
 }
 
-.clients .clients-inner {
+.clients-section .clients-inner {
   margin: 0 auto;
   max-width: 1170px;
 }
 
-.clients .clients-inner .owl-two .owl-item {
+.clients-section .clients-inner .owl-two .owl-item {
   height: 100%;
 }
 
-.technologies-section {
-  padding: 50px;
-}
-
-.technologies-section h2 {
-  text-align: center;
-  margin: 30px;
-  font-size: 50px;
+.technologies-section .header {
   position: relative;
 }
 
-.technologies-section h2:before {
+.technologies-section .header:before {
   content: '';
   position: absolute;
   border: 1px solid #dddddd;
   width: 0;
   height: 35px;
-  top: 60px;
+  top: 80px;
   left: 50%;
 }
 
-.technologies-section h2:after {
+.technologies-section .header:after {
   content: "";
   position: absolute;
   width: 6px;
   height: 6px;
   border: 2px solid #ff6400;
   border-radius: 50%;
-  top: 95px;
+  top: 115px;
   left: calc(50% - 4px);
   border: 2px solid #dd3333;
 }
@@ -641,6 +682,7 @@
           box-sizing: border-box;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -662,7 +704,8 @@
 }
 
 .tabs-list .selected {
-  border-bottom: 2px solid #dd3333;
+  background: #dd3333;
+  color: white;
 }
 
 .tabs-list .tab-content {
@@ -678,12 +721,13 @@
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
-  top: 100px;
+  top: 120px;
   z-index: 1;
 }
 
 .tabs-list .visible .tab-title {
   margin-bottom: 50px;
+  font-weight: bold;
   position: relative;
 }
 
@@ -781,7 +825,6 @@
 }
 
 .portfolio {
-  padding: 50px;
   min-height: 600px;
   background-image: url("../images/portfolio-background.jpg");
   background-repeat: no-repeat;
@@ -802,7 +845,8 @@
 }
 
 .portfolio .portfolio-inner .portfolio-subheader {
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin-top: 10px;
   text-align: center;
   position: relative;
   color: white;
@@ -876,6 +920,7 @@
 .portfolio .portfolio-inner .reference-item .project-info p:first-child {
   font-size: 30px;
   text-transform: capitalize;
+  font-weight: bold;
 }
 
 .portfolio .portfolio-inner .reference-item .project-info p:nth-child(2) {
@@ -932,32 +977,29 @@
   margin: 0 auto;
 }
 
-.section-references .references-inner h4 {
-  text-align: center;
-  font-size: 50px;
+.section-references .references-inner .header {
   color: black;
-  margin: 30px;
   position: relative;
 }
 
-.section-references .references-inner h4:before {
+.section-references .references-inner .header:before {
   content: '';
   position: absolute;
   border: 1px solid #dddddd;
   width: 0;
   height: 35px;
-  top: 60px;
+  top: 80px;
   left: 50%;
 }
 
-.section-references .references-inner h4:after {
+.section-references .references-inner .header:after {
   content: "";
   position: absolute;
   width: 6px;
   height: 6px;
   border: 2px solid #ff6400;
   border-radius: 50%;
-  top: 95px;
+  top: 115px;
   left: calc(50% - 4px);
   border: 2px solid #dd3333;
 }
