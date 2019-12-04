@@ -11,6 +11,5 @@ window.addEventListener('scroll', function() {
     } else {
         nav.classList.remove('nav-scroll');
         scrollArrows.classList.add('arrows-visible');
-
     }
 });

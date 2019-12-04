@@ -16,44 +16,46 @@
         <img alt="logo" class="logo logo-hidden" src="images/akra-logo-transparent-1.png">
         <ul class="nav-sections">
             <li class="nav-item">
-                <a class="nav-link" href="">O nas</a>
+                <a class="nav-link" href="#services">O nas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Usługi</a>
+                <a class="nav-link" href="#services">Usługi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Portfolio</a>
+                <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Aktualności</a>
+                <a class="nav-link" href="#references">Aktualności</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Kariera</a>
+                <a class="nav-link" href="#technologies">Kariera</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Kontakt</a>
+                <a class="nav-link" href="#contact">Kontakt</a>
             </li>
         </ul>
     </div>
 </nav>
 
 <body>
-    <section class="main-section">
+    <section class="main-section" id="main">
         <div class="main-cta">
             <h1 class="main-header bounceIn">Akra polska</h1>
             <p class="header-subtitle">Nowe technologie w</p>
-            <p class="header-subtitle">twoim biznesie</p>
+            <p class="header-subtitle subtitle-typing">twoim biznesie</p>
             <button class="cta-button">skontatuj się z nami</button>
         </div>
         <div class="separator"></div>
         <span class="message"><img src="images/msg-icon.png"></span>
 
-        <div class="scroll-arrows arrows-visible">
+
+        <a class="scroll-arrows arrows-visible" href="#services">
             <img class="arrow" src="images/scroll-arrow.svg">
             <img class="arrow" src="images/scroll-arrow.svg">
-        </div>
+        </a>
+
     </section>
-    <section class="services-section">
+    <section class="services-section section" id="services">
         <h1 class="header">Nasze usługi</h1>
         <div class="services-subheader">Potrzebujesz pomocy i wsparcia? Specjalizujemy się w realizacji projektów IT dla przedsiębiorstw oraz korporacji. Oferujemy wysokiej jakości kompleksowe usługi informatyczne. Nad Twoim projektem będzie czuwało grono specjalnie wyselekcjonowanych
             specjalistów, którzy sprawią, że Twój projekt stanie się jeszcze bardziej wartościowy. Dzięki naszemu bogatemu doświadczeniu pomagamy klientom w projektowaniu, budowaniu oraz kierowaniu stronami i aplikacjami internetowymi. Sprawdź, co możemy
@@ -92,33 +94,33 @@
     <section class="numbers-section section">
         <div class="numbers-inner">
             <div class="project-container">
-                <!-- <i class="fas fa-tasks"></i> -->
+
                 <img width="70" height="70" src="images/share.svg">
-                <p id="count" class="js-count">35</p>
+                <p id="count" class="project-counter">35</p>
                 <p class="project-text">PROJEKTY NA ROK</p>
             </div>
             <div class="project-container">
-                <!-- <i class="fas fa-users"></i> -->
+
                 <img width="70" height="70" src="images/teamwork.svg">
-                <p class="js-count">42</p>
+                <p class="project-counter">42</p>
                 <p class="project-text">PRACOWNIKÓW</p>
             </div>
             <div class="project-container">
-                <!-- <i class="far fa-file"></i> -->
+
                 <img width="70" height="70" src="images/meeting.svg">
-                <p class="js-count">80</p>
+                <p class="project-counter">80</p>
                 <p class="project-text">ZADOWOLONYCH KLIENTÓW</p>
             </div>
             <div class="project-container">
-                <!-- <i class="fas fa-thumbs-up"></i> -->
+
                 <img width="70" height="70" src="images/computer.svg">
-                <p class="js-count">260</p>
+                <p class="project-counter">260</p>
                 <p class="project-text">LAT DOŚWIADCZENIA PROGRAMISTÓW</p>
             </div>
         </div>
     </section>
 
-    <section class="technologies-section section">
+    <section class="technologies-section section" id="technologies">
         <h2 class="header wow slideInLeft animated">Technologie</h2>
         <div class="technologies-inner">
             <div class="tabs-container">
@@ -186,9 +188,9 @@
     </section>
 
 
-    <section class="portfolio section">
+    <section class="portfolio-section section" id="portfolio">
         <div class="portfolio-inner">
-            <h3 class="portfolio-header header">Portfolio</h3>
+            <h3 class="portfolio-header header wow bounceInUp animated">Portfolio</h3>
             <p class="portfolio-subheader">Zobacz co zrobilismy</p>
             <div class="owl-carousel  owl-one owl-theme">
 
@@ -221,7 +223,7 @@
 
 
 
-    <section class="section-references section">
+    <section class="references-section section" id="references">
         <div class="references-inner">
             <h4 class="header">References</h4>
             <div class="owl-carousel owl-three owl-theme">
@@ -255,7 +257,7 @@
         </div>
     </section>
 
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contact-inner">
             <div class="contact-header">
                 <i class="fas fa-envelope"></i>
@@ -271,7 +273,7 @@
     <section class="clients-section section">
         <div class="clients-inner">
             <h5 class="header">Klienci</h5>
-            <p>Praca z nimi to czysta przyjemność</p>
+            <p class="clients-subheader">Praca z nimi to czysta przyjemność</p>
             <div class="owl-two owl-carousel owl-theme">
                 <div class="reference-item">
                     <img class="client" src="images/client1.png">
@@ -301,7 +303,7 @@
         </div>
     </section>
 
-    <section class="socials-container">
+    <section class="socials-section">
         <h6 class="social-header">On-line 24/7</h6>
         <div class="socials-section">
             <i class="fab fa-facebook-f"></i>
@@ -311,8 +313,12 @@
         </div>
     </section>
 </body>
-<footer>
+<footer class="footer">
+
     <div class="inner-container">
+
+
+
         <ul class="footer-list">
             <li class="footer-item">
                 <p class="footer-header">o nas</p>
@@ -343,14 +349,15 @@
             </li>
         </ul>
     </div>
-    <button class="btn-up">    <img class="footer-up" src="images/arrow.png"></button>
+    <a class="btn-up" href="#main"> <img class="footer-up" src="images/arrow.png"></a>
     <div class="footer-copyright">
-        <p>©2019 AKRA POLSKA . ALL RIGHTS RESERVED</p>
+        <p class="copyright">©2019 AKRA POLSKA . ALL RIGHTS RESERVED</p>
     </div>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="js/nav.js"></script>
     <script src="js/tabs.js"></script>
+    <script src="js/typing.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/owl.js"></script>
 
