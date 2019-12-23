@@ -1414,6 +1414,9 @@
 }
 
 @media (max-width: 1280px) {
+  .nav-container .nav-wrapper {
+    display: none;
+  }
   .services-section {
     width: auto;
   }
@@ -1446,8 +1449,8 @@
   .technologies-section .tabs-container {
     width: 100%;
   }
-  .nav-container .nav-wrapper {
-    display: none;
+  .references-section .references-inner {
+    max-width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

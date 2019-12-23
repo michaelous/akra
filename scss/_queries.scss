@@ -1,5 +1,10 @@
 @import '_mixins.scss';
 @media (max-width: 1280px) {
+    .nav-container {
+        .nav-wrapper {
+            display: none;
+        }
+    }
     .services-section {
         width: auto;
         .icons-container {
@@ -22,9 +27,9 @@
             width: 100%;
         }
     }
-    .nav-container {
-        .nav-wrapper {
-            display: none;
+    .references-section {
+        .references-inner {
+            max-width: 100%;
         }
     }
 }
