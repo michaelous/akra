@@ -5,6 +5,16 @@ $facebook: #3b5998;
 $linkedin: #0e76a8;
 $footer: #1a1a1a;
 $numbers: #161616;
+$sm: 576;
+$md: 768;
+$lg: 980;
+$xl: 1280;
+@mixin wrap-center {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flex-row-between-center {
     display: flex;
     flex-direction: row;

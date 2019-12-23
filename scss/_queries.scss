@@ -1,0 +1,30 @@
+@import '_mixins.scss';
+@media (max-width: 1280px) {
+    .services-section {
+        width: auto;
+        .icons-container {
+            @include wrap-center;
+        }
+    }
+    .numbers-section {
+        .numbers-inner {
+            @include wrap-center;
+        }
+    }
+    .technologies-section {
+        .loader-container {
+            display: none;
+        }
+        .tabs-list {
+            max-width: 100%;
+        }
+        .tabs-container {
+            width: 100%;
+        }
+    }
+    .nav-container {
+        .nav-wrapper {
+            display: none;
+        }
+    }
+}
