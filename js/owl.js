@@ -4,7 +4,7 @@ $(function() {
         lazyLoad: true,
         center: true,
         responsive: {
-            992: {
+            300: {
                 items: 1
             }
         }
@@ -26,7 +26,7 @@ $(function() {
         margin: 10,
         center: true,
         responsive: {
-            992: {
+            300: {
                 items: 1
             }
         }
