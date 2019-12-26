@@ -1,53 +1,125 @@
-@import '_mixins.scss';
-@media (max-width: 1280px) {
-    .header {
-        font-size: 45px;
-        margin-bottom: 60px;
-    }
-    .nav-container {
-        .nav-wrapper {
+    @import '_mixins.scss';
+    @media (max-width: 1280px) {
+        .header {
+            font-size: 45px;
+            margin-bottom: 60px;
+        }
+        .nav-container {
+            .nav-wrapper {
+                display: none;
+            }
+        }
+        .open-nav {
+            position: fixed;
+            display: block;
+            left: calc(100% - 60px);
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            z-index: 2000;
+            width: 30px;
+            height: 30px;
+            top: 5px;
+        }
+        .nav-scroll {
             display: none;
         }
-    }
-    .services-section {
-        width: auto;
-        .icons-container {
-            @include wrap-center;
+        .nav-overlay {
+            height: 100%;
+            display: block;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
+            .nav-link {
+                padding: 12px;
+                text-decoration: none;
+                font-size: 36px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+            }
+            .close-nav {
+                position: absolute;
+                top: -30px;
+                right: 15px;
+                font-size: 100px;
+                color: white;
+            }
         }
-    }
-    .numbers-section {
-        .numbers-inner {
-            @include wrap-center;
-        }
-    }
-    .technologies-section {
-        .loader-container {
-            display: none;
-        }
-        .tabs-list {
-            max-width: 100%;
-        }
-        .tabs-container {
+        .nav-visible {
             width: 100%;
         }
-    }
-    .references-section {
-        .references-inner {
-            max-width: 100%;
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+        .services-section {
+            width: auto;
+            .icons-container {
+                @include wrap-center;
+            }
+        }
+        .numbers-section {
+            .numbers-inner {
+                @include wrap-center;
+            }
+        }
+        .technologies-section {
+            .loader-container {
+                display: none;
+            }
+            .tabs-list {
+                max-width: 100%;
+            }
+            .tabs-container {
+                width: 100%;
+            }
+        }
+        .references-section {
+            .references-inner {
+                max-width: 100%;
+            }
         }
     }
-}
-
-@media (max-width: 980px) {
-    .portfolio-section {
-        .portfolio-inner {
-            .reference-item {
-                flex-direction: column;
-                .image-container,
-                .project-info {
-                    width: 100%;
+    
+    @media (max-width: 980px) {
+        .portfolio-section {
+            .portfolio-inner {
+                .reference-item {
+                    flex-direction: column;
+                    .image-container,
+                    .project-info {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
-}
+    
+    @media (max-width: 576px) {
+        .references-section {
+            height: auto;
+            margin-bottom: 30px;
+            .references-inner {
+                .owl-carousel,
+                .owl-theme,
+                .owl-stage-outer,
+                .reference-item {
+                    height: auto;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }

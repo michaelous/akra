@@ -85,6 +85,14 @@
   margin: 0 auto;
 }
 
+.nav-overlay {
+  display: none;
+}
+
+.open-nav {
+  display: none;
+}
+
 .nav-container {
   position: fixed;
   width: 100%;
@@ -1421,6 +1429,64 @@
   .nav-container .nav-wrapper {
     display: none;
   }
+  .open-nav {
+    position: fixed;
+    display: block;
+    left: calc(100% - 60px);
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    z-index: 2000;
+    width: 30px;
+    height: 30px;
+    top: 5px;
+  }
+  .nav-scroll {
+    display: none;
+  }
+  .nav-overlay {
+    height: 100%;
+    display: block;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .nav-overlay .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .nav-overlay .nav-link {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .nav-overlay .close-nav {
+    position: absolute;
+    top: -30px;
+    right: 15px;
+    font-size: 100px;
+    color: white;
+  }
+  .nav-visible {
+    width: 100%;
+  }
+  .overlay a:hover,
+  .overlay a:focus {
+    color: #f1f1f1;
+  }
   .services-section {
     width: auto;
   }
@@ -1468,6 +1534,20 @@
   .portfolio-section .portfolio-inner .reference-item .image-container,
   .portfolio-section .portfolio-inner .reference-item .project-info {
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .references-section {
+    height: auto;
+    margin-bottom: 30px;
+  }
+  .references-section .references-inner .owl-carousel,
+  .references-section .references-inner .owl-theme,
+  .references-section .references-inner .owl-stage-outer,
+  .references-section .references-inner .reference-item {
+    height: auto;
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

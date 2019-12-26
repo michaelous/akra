@@ -11,6 +11,14 @@
     margin: 0 auto;
 }
 
+.nav-overlay {
+    display: none;
+}
+
+.open-nav {
+    display: none;
+}
+
 .nav-container {
     position: fixed;
     width: 100%;

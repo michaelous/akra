@@ -13,3 +13,21 @@ window.addEventListener('scroll', function() {
         scrollArrows.classList.add('arrows-visible');
     }
 });
+
+
+const mobileOpen = document.querySelector('.open-nav');
+const mobileClose = document.querySelector('.close-nav');
+const navOverlay = document.querySelector('.nav-overlay');
+
+
+
+mobileOpen.addEventListener('click', () => {
+    navOverlay.classList.add('nav-visible');
+    mobileOpen.style.visibility = "hidden";
+});
+
+
+mobileClose.addEventListener('click', () => {
+    navOverlay.classList.remove('nav-visible');
+    mobileOpen.style.visibility = "visible";
+});
