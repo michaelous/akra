@@ -102,6 +102,7 @@
                 .image-container,
                 .project-info {
                     width: 100%;
+                    padding: 20px 10px 20px 10px;
                 }
             }
         }
@@ -194,6 +195,11 @@
             }
         }
     }
+    .technologies-section .tabs-list {
+        .visible {
+            top: 150px;
+        }
+    }
     .portfolio-section {
         .portfolio-inner {
             h3 {
@@ -221,7 +227,7 @@
     }
     .section,
     .contact-section {
-        padding: 0px 10px 50px 10px;
+        padding: 20px 10px 20px 10px;
     }
     .contact-section {
         .contact-inner {
