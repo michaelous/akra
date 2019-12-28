@@ -315,7 +315,7 @@
 
 .main-section .scroll-arrows {
   position: absolute;
-  left: calc(50% - 10px);
+  left: calc(50% - 15px);
   bottom: 40px;
   width: 30px;
   visibility: hidden;
@@ -1663,6 +1663,13 @@
   }
   .header {
     font-size: 35px;
+    margin-bottom: 0;
+  }
+  .technologies-section .header {
+    margin-bottom: 60px;
+  }
+  .references-section .references-inner .header {
+    margin-bottom: 60px;
   }
   .main-section .main-cta .main-header,
   .main-section .main-cta .header-subtitle {

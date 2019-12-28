@@ -148,6 +148,19 @@
     }
     .header {
         font-size: 35px;
+        margin-bottom: 0;
+    }
+    .technologies-section {
+        .header {
+            margin-bottom: 60px;
+        }
+    }
+    .references-section {
+        .references-inner {
+            .header {
+                margin-bottom: 60px;
+            }
+        }
     }
     .main-section {
         .main-cta {
