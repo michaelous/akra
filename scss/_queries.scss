@@ -108,6 +108,23 @@
         }
     }
     
+    @media (max-width: 768px) {
+        .footer {
+            .btn-up {
+                right: 12px;
+                bottom: 16px;
+                width: 40px;
+                height: 40px;
+            }
+            .inner-container {
+                display: none;
+            }
+            .footer-accordion {
+                display: block;
+            }
+        }
+    }
+    
     @media (max-width: 576px) {
         .references-section {
             height: auto;

@@ -755,6 +755,71 @@
     background-color: $footer;
     position: relative;
     z-index: 6;
+    .footer-accordion {
+        display: none;
+        .accordion-link::after {
+            content: ' ';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            color: #7288a2;
+            padding: 5px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            right: 10px;
+            bottom: 5px;
+        }
+        .accordion-link.active::after {
+            transform: rotate(-90deg);
+            transition: 0.3s;
+        }
+        .accordion-item {
+            position: relative;
+        }
+        .content {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            color: white;
+            font-size: 16px;
+            transition: all 0.2s ease 0.15s;
+        }
+        .content.active {
+            opacity: 1;
+            padding: 20px 15px 20px 15px;
+            max-height: 100%;
+            transition: all 0.35s ease 0.15s;
+            text-align: justify;
+        }
+        .accordion-link {
+            position: relative;
+            width: 100%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: bold;
+            border-bottom: 2px solid #161616;
+            padding: 15px 0px 15px 15px;
+            box-sizing: border-box;
+            cursor: pointer;
+            &:after {
+                cursor: pointer;
+                color: black;
+                font-weight: bold;
+                font-size: 25px;
+                content: "\27A4";
+                transform: rotate(90deg);
+                transform-origin: center;
+            }
+        }
+        .accordion-link.active {
+            color: $red;
+        }
+    }
     .inner-container {
         max-width: 1170px;
         margin: 0 auto;

@@ -1276,6 +1276,98 @@
   z-index: 6;
 }
 
+.footer .footer-accordion {
+  display: none;
+}
+
+.footer .footer-accordion .accordion-link::after {
+  content: ' ';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  color: #7288a2;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  right: 10px;
+  bottom: 5px;
+}
+
+.footer .footer-accordion .accordion-link.active::after {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer .footer-accordion .accordion-item {
+  position: relative;
+}
+
+.footer .footer-accordion .content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  color: white;
+  font-size: 16px;
+  -webkit-transition: all 0.2s ease 0.15s;
+  transition: all 0.2s ease 0.15s;
+}
+
+.footer .footer-accordion .content.active {
+  opacity: 1;
+  padding: 20px 15px 20px 15px;
+  max-height: 100%;
+  -webkit-transition: all 0.35s ease 0.15s;
+  transition: all 0.35s ease 0.15s;
+  text-align: justify;
+}
+
+.footer .footer-accordion .accordion-link {
+  position: relative;
+  width: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid #161616;
+  padding: 15px 0px 15px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+
+.footer .footer-accordion .accordion-link:after {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  content: "\27A4";
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.footer .footer-accordion .accordion-link.active {
+  color: #dd3333;
+}
+
 .footer .inner-container {
   max-width: 1170px;
   margin: 0 auto;
@@ -1534,6 +1626,21 @@
   .portfolio-section .portfolio-inner .reference-item .image-container,
   .portfolio-section .portfolio-inner .reference-item .project-info {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer .btn-up {
+    right: 12px;
+    bottom: 16px;
+    width: 40px;
+    height: 40px;
+  }
+  .footer .inner-container {
+    display: none;
+  }
+  .footer .footer-accordion {
+    display: block;
   }
 }
 
