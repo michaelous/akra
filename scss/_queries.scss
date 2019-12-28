@@ -1,142 +1,253 @@
-    @import '_mixins.scss';
-    @media (max-width: 1280px) {
-        .header {
-            font-size: 45px;
-            margin-bottom: 60px;
-        }
-        .nav-container {
-            .nav-wrapper {
-                display: none;
-            }
-        }
-        .open-nav {
-            position: fixed;
-            display: block;
-            left: calc(100% - 60px);
-            color: white;
-            font-size: 45px;
-            font-weight: bold;
-            z-index: 2000;
-            width: 30px;
-            height: 30px;
-            top: 5px;
-        }
-        .nav-scroll {
+@import '_mixins.scss';
+@media (max-width: 1280px) {
+    .header {
+        font-size: 45px;
+        margin-bottom: 60px;
+    }
+    .nav-container {
+        .nav-wrapper {
             display: none;
         }
-        .nav-overlay {
-            height: 100%;
-            display: block;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow-x: hidden;
-            transition: 0.5s;
-            .overlay-content {
-                position: relative;
-                top: 25%;
-                width: 100%;
-                text-align: center;
-                margin-top: 30px;
-            }
-            .nav-link {
-                padding: 12px;
-                text-decoration: none;
-                font-size: 36px;
-                color: white;
-                display: block;
-                transition: 0.3s;
-            }
-            .close-nav {
-                position: absolute;
-                top: -30px;
-                right: 15px;
-                font-size: 100px;
-                color: white;
-            }
+    }
+    .open-nav {
+        position: fixed;
+        display: block;
+        left: calc(100% - 60px);
+        color: white;
+        font-size: 45px;
+        font-weight: bold;
+        z-index: 2000;
+        width: 30px;
+        height: 30px;
+        top: 5px;
+    }
+    .nav-scroll {
+        display: none;
+    }
+    .nav-overlay {
+        height: 100%;
+        display: block;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.5s;
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
         }
-        .nav-visible {
+        .nav-link {
+            padding: 12px;
+            text-decoration: none;
+            font-size: 36px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .close-nav {
+            position: absolute;
+            top: -30px;
+            right: 15px;
+            font-size: 100px;
+            color: white;
+        }
+    }
+    .nav-visible {
+        width: 100%;
+    }
+    .overlay a:hover,
+    .overlay a:focus {
+        color: #f1f1f1;
+    }
+    .services-section {
+        width: auto;
+        .icons-container {
+            @include wrap-center;
+        }
+    }
+    .numbers-section {
+        .numbers-inner {
+            @include wrap-center;
+        }
+    }
+    .technologies-section {
+        .loader-container {
+            display: none;
+        }
+        .tabs-list {
+            max-width: 100%;
+        }
+        .tabs-container {
             width: 100%;
         }
-        .overlay a:hover,
-        .overlay a:focus {
-            color: #f1f1f1;
+    }
+    .references-section {
+        .references-inner {
+            max-width: 100%;
         }
-        .services-section {
-            width: auto;
-            .icons-container {
-                @include wrap-center;
-            }
-        }
-        .numbers-section {
-            .numbers-inner {
-                @include wrap-center;
-            }
-        }
-        .technologies-section {
-            .loader-container {
-                display: none;
-            }
-            .tabs-list {
-                max-width: 100%;
-            }
-            .tabs-container {
-                width: 100%;
-            }
-        }
-        .references-section {
-            .references-inner {
-                max-width: 100%;
+    }
+}
+
+@media (max-width: 980px) {
+    .portfolio-section {
+        .portfolio-inner {
+            .reference-item {
+                flex-direction: column;
+                .image-container,
+                .project-info {
+                    width: 100%;
+                }
             }
         }
     }
-    
-    @media (max-width: 980px) {
-        .portfolio-section {
-            .portfolio-inner {
-                .reference-item {
-                    flex-direction: column;
-                    .image-container,
-                    .project-info {
-                        width: 100%;
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        .message {
+            display: none;
+        }
+    }
+    .footer {
+        .btn-up {
+            right: 8px;
+            bottom: 16px;
+            width: 40px;
+            height: 40px;
+        }
+        .inner-container {
+            display: none;
+        }
+        .footer-accordion {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-overlay {
+        .nav-link {
+            font-size: 25px;
+        }
+        .close-nav {
+            top: -25px;
+            right: 5px;
+            font-size: 90px;
+        }
+    }
+    .open-nav {
+        left: calc(100% - 50px);
+        font-size: 40px;
+    }
+    .header {
+        font-size: 35px;
+    }
+    .main-section {
+        .main-cta {
+            .main-header,
+            .header-subtitle {
+                margin: 5px;
+            }
+            .header-subtitle:nth-child(2) {
+                font-size: 30px;
+            }
+        }
+    }
+    .services-section {
+        .services-subheader {
+            padding-top: 20px;
+        }
+        .icons-container {
+            .icon-text {
+                max-width: none;
+                margin: 20px 10px 20px 10px;
+                .icon-wrapper {
+                    width: 25px;
+                    height: 25px;
+                    .fas {
+                        font-size: 20px;
+                        padding: 15px;
                     }
                 }
             }
         }
     }
-    
-    @media (max-width: 768px) {
-        .footer {
-            .btn-up {
-                right: 12px;
-                bottom: 16px;
-                width: 40px;
-                height: 40px;
+    .numbers-section .numbers-inner {
+        .project-container {
+            height: 160px;
+            width: 180px;
+            .project-counter {
+                font-size: 20px;
             }
-            .inner-container {
-                display: none;
+            .project-text {
+                font-size: 14px;
             }
-            .footer-accordion {
-                display: block;
+            img {
+                width: 50px;
+                height: 50px;
             }
         }
     }
-    
-    @media (max-width: 576px) {
-        .references-section {
-            height: auto;
-            margin-bottom: 30px;
-            .references-inner {
-                .owl-carousel,
-                .owl-theme,
-                .owl-stage-outer,
-                .reference-item {
-                    height: auto;
-                    margin-bottom: 10px;
+    .portfolio-section {
+        .portfolio-inner {
+            h3 {
+                font-size: 35px;
+            }
+            .reference-item {
+                .image-container {
+                    .project-img {
+                        max-width: 250px;
+                    }
+                }
+                .project-info {
+                    p:first-child {
+                        font-size: 25px;
+                    }
+                    p:nth-child(2) {
+                        font-size: 14px;
+                    }
+                    .btn-live {
+                        margin: 0 auto;
+                    }
                 }
             }
         }
     }
+    .section,
+    .contact-section {
+        padding: 0px 10px 50px 10px;
+    }
+    .contact-section {
+        .contact-inner {
+            .contact-header {
+                .fas {
+                    display: none;
+                }
+            }
+        }
+    }
+    .references-section {
+        height: auto;
+        margin-bottom: 30px;
+        .references-inner {
+            .owl-carousel,
+            .owl-theme,
+            .owl-stage-outer,
+            .reference-item {
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }
+        .card-reference {
+            .quote-content {
+                padding: 20px;
+            }
+        }
+    }
+}

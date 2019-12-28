@@ -192,7 +192,7 @@
 
 .separator {
     bottom: -100px;
-    border-top: 10px solid grey;
+    border-top: 1px solid darken($red, 40);
     background: white;
     height: 200px;
     width: 100%;
@@ -772,7 +772,7 @@
             bottom: 5px;
         }
         .accordion-link.active::after {
-            transform: rotate(-90deg);
+            transform: rotate(180deg);
             transition: 0.3s;
         }
         .accordion-item {
@@ -808,92 +808,96 @@
             cursor: pointer;
             &:after {
                 cursor: pointer;
-                color: black;
-                font-weight: bold;
-                font-size: 25px;
-                content: "\27A4";
-                transform: rotate(90deg);
+                background: url(../images/down-arrow.png);
                 transform-origin: center;
+                transform: rotate(0deg);
+                background-size: 25px 25px;
+                background-repeat: no-repeat;
+                background-position: center;
             }
         }
-        .accordion-link.active {
-            color: $red;
-        }
     }
-    .inner-container {
-        max-width: 1170px;
-        margin: 0 auto;
-        padding: 40px;
+    .accordion-link.active {
+        color: $red;
     }
-    .footer-list {
+}
+
+.inner-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .footer-item:first-child,
+     :last-child {
+        width: 30%;
+    }
+    .footer-item:nth-child(2),
+    .footer-item:nth-child(3) {
+        width: 20%;
+        padding: 0px 20px 0px 20px;
+    }
+    .footer-item {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .footer-item:first-child,
-         :last-child {
-            width: 30%;
-        }
-        .footer-item:nth-child(2),
-        .footer-item:nth-child(3) {
-            width: 20%;
-            padding: 0px 20px 0px 20px;
-        }
-        .footer-item {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        .footer-header {
+            text-transform: uppercase;
             color: white;
-            .footer-header {
-                text-transform: uppercase;
-                color: white;
-                font-weight: bold;
-                position: relative;
-                margin: 25px 0px 50px 0px;
-                &:after {
-                    content: "";
-                    background: url(../images/line.png);
-                    position: absolute;
-                    left: calc(0px);
-                    bottom: -25px;
-                    height: 4px;
-                    width: 30px;
-                }
-            }
-            .footer-info,
-            ul {
-                width: 100%;
-                color: #999;
-                font-size: 12px;
-                line-height: 25px;
-                li {
-                    &:hover {
-                        color: $red;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
-    }
-    .btn-up {
-        @include flex-row-center-center;
-        position: absolute;
-        background: black;
-        border: 1px solid lighten($color: #000000, $amount: 10);
-        right: 40px;
-        bottom: 40px;
-        width: 60px;
-        height: 60px;
-        cursor: pointer;
-    }
-    .footer-copyright {
-        background: black;
-        .copyright {
-            padding: 30px;
             font-weight: bold;
-            font-size: 10px;
-            color: white;
-            text-align: center;
+            position: relative;
+            margin: 25px 0px 50px 0px;
+            &:after {
+                content: "";
+                background: url(../images/line.png);
+                position: absolute;
+                left: calc(0px);
+                bottom: -25px;
+                height: 4px;
+                width: 30px;
+            }
         }
+        .footer-info,
+        ul {
+            width: 100%;
+            color: #999;
+            font-size: 12px;
+            line-height: 25px;
+            li {
+                &:hover {
+                    color: $red;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.btn-up {
+    @include flex-row-center-center;
+    position: absolute;
+    background: black;
+    border: 1px solid lighten($color: #000000, $amount: 10);
+    right: 40px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.footer-copyright {
+    background: black;
+    .copyright {
+        padding: 30px;
+        font-weight: bold;
+        font-size: 10px;
+        color: white;
+        text-align: center;
     }
 }
 
