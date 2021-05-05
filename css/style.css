@@ -700,12 +700,13 @@
   display: -ms-flexbox;
   display: flex;
   cursor: pointer;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   border: 2px solid #ec8a8a;
   background: #e45f5f;
 }
