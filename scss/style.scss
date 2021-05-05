@@ -372,15 +372,16 @@
         .contact-btn {
             width: 200px;
             height: 60px;
-            border: none;
-            padding: 0px 20px 0px 20px;
+            padding: 0 20px 0 20px;
             color: white;
             display: flex;
+            align-items: center;
             cursor: pointer;
             flex-direction: row;
             justify-content: space-around;
             border: 2px solid lighten($color: $red, $amount: 20);
             background: lighten($color: $red, $amount: 10);
+
             &:hover {
                 transition: 0.3s all;
                 background: lighten($color: $red, $amount: 5);
@@ -901,4 +902,4 @@
     }
 }
 
-@import '_queries.scss'
+@import '_queries.scss';
