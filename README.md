@@ -5,3 +5,5 @@ To make it harder I am not using any CSS framework as Bootstrap. <br>
 With Vanilla JS I re-created technologies-section, update nav on scroll and made typing effect.<br>
 Popup header animations are hooked with wow.js and animate.css.<br>
 I used few .SVG icons and compressed all images.<br>
+<br>
+Live: https://michaelous.github.io/akra 
