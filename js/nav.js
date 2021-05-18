@@ -1,6 +1,6 @@
 window.addEventListener('scroll', function() {
-    var nav = document.querySelector(".nav-container");
-    var scrollArrows = document.querySelector('.scroll-arrows');
+    const nav = document.querySelector(".nav-container");
+    const scrollArrows = document.querySelector('.scroll-arrows');
     let scroll = window.scrollY;
     if (scroll > 100) {
         {
